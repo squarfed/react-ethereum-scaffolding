@@ -8,6 +8,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "karma": "^1.5.0",
     "webpack": "^2.3.2"
   },
   "scripts": {
