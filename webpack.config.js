@@ -1,26 +1,32 @@
+var path = require('path')
+
 module.exports = {
-  entry: './src/app.jsx',
+  entry: './src/index.js',
   output: {
-    path: __dirname,
-    filename: './dist/bundle.js'
-  },
-  resolve: {
-    root: __dirname,
-    extensions: ['', '.js', '.jsx']
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['react', 'es2015']
-        },
-        exclude: /(node_modules|bower_components)/
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['react', 'es2015']
+          }
+        }
       },
       {
-        test: /\.scss?$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader']
+        test: /\.scss$/,
+        use: [{
+          loader: "style-loader" // creates style nodes from JS strings
+        }, {
+          loader: "css-loader" // translates CSS into CommonJS
+        }, {
+          loader: "sass-loader" // compiles Sass to CSS
+        }]
       }
     ]
   }
