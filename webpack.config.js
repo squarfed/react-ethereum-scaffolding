@@ -6,6 +6,12 @@ module.exports = {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js'
   },
+  devServer: {
+    contentBase: __dirname + "/public/",
+    inline: true,
+    host: '0.0.0.0',
+    port: 8080,
+  },
   module: {
     rules: [
       {
