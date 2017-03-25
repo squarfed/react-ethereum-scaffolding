@@ -27,6 +27,7 @@
     "webpack": "^2.3.2"
   },
   "scripts": {
+    "build": "webpack",
     "test": "karma start",
     "start": "node server.js"
   },
