@@ -1,0 +1,22 @@
+{
+  "name": "react-ethereum-example",
+  "version": "0.0.1",
+  "description": "An example react app that interacts with an ethereum contract",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^2.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ethereum",
+    "react"
+  ],
+  "author": "",
+  "license": "BSD-3-Clause"
+}
