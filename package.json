@@ -33,7 +33,7 @@
   "scripts": {
     "build": "webpack",
     "test": "karma start",
-    "start": "node server.js"
+    "start": "webpack-dev-server  --open"
   },
   "keywords": [
     "ethereum",
