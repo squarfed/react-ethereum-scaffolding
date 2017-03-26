@@ -7,10 +7,10 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: __dirname + "/public/",
+    contentBase: path.join(__dirname, '/public/'),
     inline: true,
     host: '0.0.0.0',
-    port: 8080,
+    port: 8080
   },
   module: {
     rules: [
@@ -27,13 +27,13 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [{
-          loader: "style-loader" // creates style nodes from JS strings
+          loader: 'style-loader' // creates style nodes from JS strings
         }, {
-          loader: "css-loader" // translates CSS into CommonJS
+          loader: 'css-loader' // translates CSS into CommonJS
         }, {
-          loader: "sass-loader" // compiles Sass to CSS
+          loader: 'sass-loader' // compiles Sass to CSS
         }]
       }
     ]
   }
-};
+}
