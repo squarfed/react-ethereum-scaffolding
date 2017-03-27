@@ -9,14 +9,10 @@ const App = React.createClass({
     counter: 0
   }),
 
-  submitHandler: function (e) {
-    e.preventDefault()
-    const value = e.target.number.value
+  setCounter: function (x) {
     this.setState({
-      counter: value
+      counter: x
     })
-    e.target.reset()
-
   },
 
   render: function () {
@@ -29,13 +25,13 @@ const App = React.createClass({
           </div>
         </div>
         <div className='row'>
-          <div className='col-12 col-md-6 offset-md-3 center-block'>
+          <div className='col-12 col-md-6 offset-md-3'>
              <Display counter={this.state.counter}/>
           </div>
         </div>
         <div className='row'>
           <div className='col-12 col-md-6 offset-md-3'>
-             <Form submitHandler={submitHandler}/>
+             <Form setCounter={this.setCounter}/>
           </div>
         </div>
       </div>
