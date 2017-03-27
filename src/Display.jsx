@@ -1,4 +1,3 @@
-//xxx
 import React from 'React'
 
 const Display = props => {
