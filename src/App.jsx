@@ -21,7 +21,7 @@ const App = React.createClass({
       <div className='container'>
         <div className='row'>
           <div className='col-12 col-md-6 offset-md-3'>
-             <h1 className='text-center'> Hello world! </h1>
+             <h1 className='text-center'> Register a number! </h1>
           </div>
         </div>
         <div className='row'>
