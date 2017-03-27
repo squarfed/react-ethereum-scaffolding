@@ -5,7 +5,7 @@ const Form = props => {
   return (
     <form onSubmit={submitHandler}>
       <input type='number' name='number' placeholder='number' className='form-control'/>
-      <button type='submit' className='btn btn-primary' className='form-control'> Submit </button>
+      <button type='submit' className='btn btn-primary form-control'> Submit </button>
     </form>
   )
 }
