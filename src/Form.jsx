@@ -1,11 +1,12 @@
 import React from 'React'
 
-const Form = (props) => {
+const Form = props => {
   const submitHandler = props.submitHandler
+  console.log(submitHandler)
   return (
-    <form>
-      <input type='number' placeholder='number'/>
-      <button type='submit' onSubmit={submitHandler}> Submit </button>
+    <form onSubmit={submitHandler}>
+      <input type='number' name='number' placeholder='number'/>
+      <button type='submit'> Submit </button>
     </form>
   )
 }
