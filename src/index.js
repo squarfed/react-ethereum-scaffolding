@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Form from './form.jsx'
+import Form from './Form.jsx'
 import './App.scss'
 
 const App = () => {
