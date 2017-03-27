@@ -11,9 +11,7 @@ const App = React.createClass({
 
   submitHandler: function (e) {
     e.preventDefault()
-    console.log('event is:', e)
     const value = e.target.number.value
-    console.log('value is: ', value)
     this.setState({
       counter: value
     })
@@ -24,10 +22,22 @@ const App = React.createClass({
   render: function () {
     const submitHandler = this.submitHandler
     return (
-      <div>
-      <h1> Hello world! </h1>
-      <Display counter={this.state.counter}/>
-      <Form submitHandler={submitHandler}/>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-12 col-md-6 offset-md-3'>
+             <h1> Hello world! </h1>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-12 col-md-6 offset-md-3'>
+             <Display counter={this.state.counter}/>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-12 col-md-6 offset-md-3'>
+             <Form submitHandler={submitHandler}/>
+          </div>
+        </div>
       </div>
     )
   }

@@ -2,11 +2,10 @@ import React from 'React'
 
 const Form = props => {
   const submitHandler = props.submitHandler
-  console.log(submitHandler)
   return (
     <form onSubmit={submitHandler}>
-      <input type='number' name='number' placeholder='number'/>
-      <button type='submit'> Submit </button>
+      <input type='number' name='number' placeholder='number' className='form-control'/>
+      <button type='submit' className='btn btn-primary' className='form-control'> Submit </button>
     </form>
   )
 }
