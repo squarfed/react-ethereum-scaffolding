@@ -1,7 +1,7 @@
 {
-  "name": "react-ethereum-example",
+  "name": "react-ethereum-scaffolding",
   "version": "0.0.1",
-  "description": "An example react app that interacts with an ethereum contract",
+  "description": "Scaffolding for an Etherum Dapp using React for the frontend",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -31,6 +31,7 @@
     "mocha": "^3.2.0",
     "node-sass": "^4.5.1",
     "sass-loader": "^6.0.3",
+    "solc-loader": "^1.1.1",
     "standard": "^9.0.2",
     "style-loader": "^0.16.0",
     "web3-loader": "^1.1.2",
@@ -47,6 +48,15 @@
     "ethereum",
     "react"
   ],
-  "author": "",
-  "license": "BSD-3-Clause"
+  "contributors": [
+    {
+      "name": "Federico Squartini",
+      "email": "federico.squartini@gmail.com"
+    },
+    {
+      "name": "Nicola Squartini",
+      "email": "tensor5@gmail.com"
+    }
+  ],
+  "license": "MIT"
 }
