@@ -7,7 +7,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx', '.sol']
   },
   devServer: {
     contentBase: path.join(__dirname, '/public/'),
@@ -36,6 +36,11 @@ module.exports = {
         }, {
           loader: 'sass-loader' // compiles Sass to CSS
         }]
+      },
+      {
+        test: /\.sol$/,
+        use: [{ loader: 'web3-loader' },{ loader: 'solc-loader' }
+          ]
       }
     ]
   }

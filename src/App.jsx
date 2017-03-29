@@ -3,7 +3,15 @@ import ReactDOM from 'react-dom'
 import Form from './Form'
 import Display from './Display'
 import './App.scss'
+import Contract from './contracts/counter'
 
+const Counter = Contract['counter.sol:Counter']
+const web3 = Contract.web3
+
+console.log('counter is', Counter)
+console.log('web3 is: ', web3)
+
+debugger
 const App = React.createClass({
   getInitialState: () => ({
     counter: 0
