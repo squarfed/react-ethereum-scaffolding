@@ -24,7 +24,9 @@ const App = React.createClass({
         console.error(err)
         return
       }
-      this.setCounter(res.toNumber())
+      this.setState({
+        counter: res.toNumber()
+      })
     })
   },
 
