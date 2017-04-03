@@ -11,15 +11,33 @@ const web3 = Contract.web3
 console.log('counter is', Counter)
 console.log('web3 is: ', web3)
 
-debugger
+const account = web3.eth.accounts[0]
+
 const App = React.createClass({
   getInitialState: () => ({
     counter: 0
   }),
 
+  componentDidMount: function () {
+    Counter.counter.call((err, res) => {
+      if (err) {
+        console.error(err)
+        return
+      }
+      this.setCounter(res.toNumber())
+    })
+  },
+
   setCounter: function (x) {
-    this.setState({
-      counter: x
+    Counter.setCounter(x, {from: account}, (err) => {
+      if (err) {
+        console.error(err)
+        return
+      }
+
+      this.setState({
+        counter: x
+      })
     })
   },
 
