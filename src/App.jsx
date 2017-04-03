@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Form from './Form'
 import Display from './Display'
-import './App.scss'
+import './app.scss'
 import Contract from './contracts/counter'
 
 const Counter = Contract['counter.sol:Counter']
