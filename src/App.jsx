@@ -7,10 +7,6 @@ import Contract from './contracts/counter'
 
 const Counter = Contract['counter.sol:Counter']
 const web3 = Contract.web3
-
-console.log('counter is', Counter)
-console.log('web3 is: ', web3)
-
 const account = web3.eth.accounts[0]
 
 const App = React.createClass({
