@@ -19,13 +19,13 @@ const App = React.createClass({
   }),
 
   componentDidMount: function () {
-    Counter.counter.call((err, res) => {
+    Counter.CounterUpdated((err, ev) => {
       if (err) {
         console.error(err)
-        return
       }
+
       this.setState({
-        counter: res.toNumber()
+        counter: ev.args.value.toNumber()
       })
     })
   },
@@ -34,12 +34,7 @@ const App = React.createClass({
     Counter.setCounter(x, {from: account}, (err) => {
       if (err) {
         console.error(err)
-        return
       }
-
-      this.setState({
-        counter: x
-      })
     })
   },
 
