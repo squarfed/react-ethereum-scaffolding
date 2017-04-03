@@ -1,26 +1,24 @@
 // Karma configuration
 // Generated on Sun Mar 26 2017 19:02:49 GMT+0200 (CEST)
 
-//var webpackConfig = require('./webpack.config.js');
+// var webpackConfig = require('./webpack.config.js');
 
-module.exports = function(config) {
+module.exports = (config) => {
   config.set({
 
     plugins: [
-      require("karma-webpack"),
-      require("karma-mocha"),
-      require("karma-mocha-reporter"),
-      require("karma-chrome-launcher"),
+      require('karma-webpack'),
+      require('karma-mocha'),
+      require('karma-mocha-reporter'),
+      require('karma-chrome-launcher')
     ],
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
-
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['mocha'],
-
 
     // list of files / patterns to load in the browser
     files: [
@@ -66,7 +64,7 @@ module.exports = function(config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity,
+    concurrency: Infinity
 
 //    webpack: webpackConfig
   })

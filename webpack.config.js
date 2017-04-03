@@ -39,8 +39,10 @@ module.exports = {
       },
       {
         test: /\.sol$/,
-        use: [{ loader: 'web3-loader' },{ loader: 'solc-loader' }
-          ]
+        use: [
+            {loader: 'web3-loader'},
+            {loader: 'solc-loader'}
+        ]
       }
     ]
   }

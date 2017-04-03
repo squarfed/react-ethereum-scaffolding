@@ -42,22 +42,21 @@ const App = React.createClass({
   },
 
   render: function () {
-    const submitHandler = this.submitHandler
     return (
       <div className='container'>
         <div className='row'>
           <div className='col-12 col-md-6 offset-md-3'>
-             <h1 className='text-center'> Register a number! </h1>
+            <h1 className='text-center'> Register a number! </h1>
           </div>
         </div>
         <div className='row'>
           <div className='col-12 col-md-6 offset-md-3'>
-             <Display counter={this.state.counter}/>
+            <Display counter={this.state.counter} />
           </div>
         </div>
         <div className='row'>
           <div className='col-12 col-md-6 offset-md-3'>
-             <Form setCounter={this.setCounter}/>
+            <Form setCounter={this.setCounter} />
           </div>
         </div>
       </div>

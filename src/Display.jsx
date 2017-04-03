@@ -7,18 +7,18 @@ const displayStyle = {
   margin: '10px',
   border: '2px solid',
   borderRadius: '10px',
-   alignItems: 'center',
+  alignItems: 'center',
   display: 'flex',
   justifyContent: 'center',
   fontSize: '40px'
 }
 
 const Display = props => {
-  return(
+  return (
     <div style={displayStyle} className='mx-auto'>
       {props.counter}
     </div>
-    )
+  )
 }
 
 export default Display
