@@ -1,4 +1,5 @@
 import React from 'react'
+import Spinner from 'react-spinkit'
 
 const displayStyle = {
   height: '100px',
@@ -16,8 +17,9 @@ const displayStyle = {
 const Display = ({counter, isLoading}) => {
   return (
     <div style={displayStyle} className='mx-auto'>
-      {isLoading ? 'W' : counter}
-    </div>
+      {isLoading ? <Spinner spinnerName='double-bounce' noFadeIn/>
+                 : counter}
+        </div>
   )
 }
 
