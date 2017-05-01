@@ -11,7 +11,8 @@ const account = web3.eth.accounts[0]
 
 const App = React.createClass({
   getInitialState: () => ({
-    counter: 0
+    counter: 0,
+    isLoading: true
   }),
 
   componentDidMount: function () {
@@ -19,14 +20,17 @@ const App = React.createClass({
       if (err) {
         console.error(err)
       }
-
       this.setState({
+        isLoading: false,
         counter: ev.args.value.toNumber()
       })
     })
   },
 
   setCounter: function (x) {
+      this.setState({
+        isLoading: true,
+      })
     Counter.setCounter(x, {from: account}, (err) => {
       if (err) {
         console.error(err)
@@ -35,6 +39,7 @@ const App = React.createClass({
   },
 
   render: function () {
+    const {isLoading, counter} = this.state
     return (
       <div className='container'>
         <div className='row'>
@@ -44,7 +49,7 @@ const App = React.createClass({
         </div>
         <div className='row'>
           <div className='col-12 col-md-6 offset-md-3'>
-            <Display counter={this.state.counter} />
+            <Display counter={counter} isLoading={isLoading}/>
           </div>
         </div>
         <div className='row'>

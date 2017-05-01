@@ -13,10 +13,10 @@ const displayStyle = {
   fontSize: '40px'
 }
 
-const Display = props => {
+const Display = ({counter, isLoading}) => {
   return (
     <div style={displayStyle} className='mx-auto'>
-      {props.counter}
+      {isLoading ? 'W' : counter}
     </div>
   )
 }
